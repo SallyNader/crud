@@ -1,0 +1,21 @@
+
+<br/>
+<br/>
+<div class="col-md-6" >
+  <h1>Base Converter</h1>
+<form  [formGroup]="formPro"  >
+  <div class="form-group">
+    <input type="text" placeholder="decimal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" (ngModelChange)="decimalChanged(oldvalue,newValue=$event)"          name="decimal" formControlName="decimal" >
+  </div>
+  <div class="form-group">
+    <input type="text" placeholder="binary"  class="form-control" id="exampleInputPassword1" name="binary" formControlName="binary">
+  </div>
+  <div class="form-group">
+    <input type="text" placeholder="octal"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="octal" formControlName="octal">
+  </div>
+  <div class="form-group">
+    <input type="text"  placeholder="hexa" class="form-control" id="exampleInputPassword1" name="hexa" formControlName="hexa">
+  </div>
+</form>
+
+</div>
