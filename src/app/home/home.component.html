@@ -1,0 +1,33 @@
+
+<br/>
+<a routerLink="/product" class="btn btn-info" role="button">Add Product</a>
+
+<br/>
+
+<br/>
+
+
+<h3>Products</h3>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>color</th>
+      <th>delete</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let p of products" >
+      
+      <td>{{p.id}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.color}}</td>
+      <td (click)="deleteProduct(p.id)"   >Delete</td>
+    </tr>
+    
+    
+  </tbody>
+</table>
