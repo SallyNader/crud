@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup ,FormControl} from '@angular/forms';
+
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -11,13 +12,29 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {
 
-    this.formProp=new FormGroup({
-      firstName:new FormControl("sally"),
-      lastName:new FormControl(""),
-      languages:new FormControl(""),       
+
+    this.formProp = new FormGroup({
+      firstName: new FormControl("",Validators.compose([
+        Validators.required,
+        Validators.minLength(3)
+
+      ])),
+      lastName: new FormControl("",this.textValidator),
+      languages: new FormControl(""),
     });
   }
-  onSubmit(user){
+
+ //custom validator
+  textValidator(control){
+    if(control.value.length < 3)
+      return {'lastname' : true};
+
+
+
+  }
+
+
+  onSubmit(user) {
 
     console.log(user);
   }

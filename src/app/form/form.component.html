@@ -46,7 +46,8 @@ template Driven Form
         
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!formProp.valid" >Submit</button>
   </form>
   
   </div>

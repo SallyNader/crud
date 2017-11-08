@@ -22,7 +22,10 @@ import { ConverterComponent } from './converter/converter.component';
 import { HomeComponent } from './home/home.component';
 import { HttpModule } from '@angular/http';
 import { ProductComponent } from './product/product.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+
 const appRoutes:Routes=[
+
 {path: 'form' ,component :FormComponent},
 {path: 'converter' ,component :ConverterComponent},
 {path : 'list'  ,component :ListComponent},
@@ -31,8 +34,9 @@ const appRoutes:Routes=[
 {path :'login'  ,component :LoginFormComponent},
 {path: 'pipe'   ,component:PipeComponent},
 {path : ''       ,component:HomeComponent},
-{path : 'product' ,component :ProductComponent}
-
+{path : 'product' ,component :ProductComponent},
+{path: "product", component: ProductComponent},
+{path: "update/:id", component: UpdateProductComponent},
 
 
 
@@ -41,8 +45,11 @@ const appRoutes:Routes=[
 
 @NgModule({
   declarations: [
+
     PipeDefaultImage,
     SortPipe,
+    ProductComponent,
+    HomeComponent,
     AppComponent,
     ListComponent,
     TestComponent,
@@ -54,8 +61,8 @@ const appRoutes:Routes=[
     PipeComponent,
     FormComponent,
     ConverterComponent,
-    HomeComponent,
-    ProductComponent
+    UpdateProductComponent,
+    
   ],
   imports: [
     HttpModule,

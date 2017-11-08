@@ -8,13 +8,17 @@
 
 
 <h3>Products</h3>
-
+<div  class="col-md-6">
 <table class="table table-bordered">
   <thead>
     <tr>
       <th>ID</th>
       <th>Name</th>
       <th>color</th>
+      <th>delete</th>
+      <th>update</th>
+      
+      
     </tr>
   </thead>
   <tbody>
@@ -23,8 +27,12 @@
       <td>{{p.id}}</td>
       <td>{{p.name}}</td>
       <td>{{p.color}}</td>
+
+      <td (click)="deleteProduct(p.id)" ><a>Delete</a></td>
+      <td [routerLink]="['/update', p.id]"  ><a>Update</a></td>
     </tr>
     
     
   </tbody>
 </table>
+</div>
