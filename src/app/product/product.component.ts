@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import {Http, Response, Headers} from '@angular/http';
 
 @Component({
@@ -7,6 +8,8 @@ import {Http, Response, Headers} from '@angular/http';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+
+
   productObj : object= {};
   confirmationString :string ="new product was added";
   isAdded :boolean =false;
@@ -14,6 +17,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
   addNewProduct(product){
 

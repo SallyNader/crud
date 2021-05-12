@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -7,6 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./converter.component.css']
 })
 export class ConverterComponent implements OnInit {
+
   formPro;
   constructor() { }
 
@@ -21,6 +23,7 @@ export class ConverterComponent implements OnInit {
 
     });
   }
+
 
 
   decimalChanged(oldVal, newVal) {

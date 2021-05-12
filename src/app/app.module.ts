@@ -20,19 +20,23 @@ import {PipeDefaultImage} from './pipes/pipe.defaultImage';
 import { FormComponent } from './form/form.component';
 import { ConverterComponent } from './converter/converter.component';
 import { HomeComponent } from './home/home.component';
-import { ProductComponent } from './product/product.component';
 import { HttpModule } from '@angular/http';
+import { ProductComponent } from './product/product.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+
 const appRoutes:Routes=[
 
+{path: 'form' ,component :FormComponent},
+{path: 'converter' ,component :ConverterComponent},
 {path : 'list'  ,component :ListComponent},
 {path  :'test'  ,component :TestComponent},
 {path :'item'   ,component :ItemComponent},
 {path :'login'  ,component :LoginFormComponent},
 {path: 'pipe'   ,component:PipeComponent},
-{path: 'form' ,component :FormComponent},
-{path: 'converter' ,component :ConverterComponent},
-{path: "", component: HomeComponent},
+{path : ''       ,component:HomeComponent},
+{path : 'product' ,component :ProductComponent},
 {path: "product", component: ProductComponent},
+{path: "update/:id", component: UpdateProductComponent},
 
 
 
@@ -56,7 +60,9 @@ const appRoutes:Routes=[
     LoginFormComponent,
     PipeComponent,
     FormComponent,
-    ConverterComponent
+    ConverterComponent,
+    UpdateProductComponent,
+    
   ],
   imports: [
     HttpModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-form',
@@ -10,6 +11,7 @@ export class FormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
 
     this.formProp = new FormGroup({
       firstName: new FormControl("",Validators.compose([
